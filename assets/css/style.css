@@ -1,0 +1,167 @@
+/* =========================================
+   PALETTE DE COULEURS & VARIABLES
+   ========================================= */
+:root {
+    --bleu-canard: #17a2b8;
+    --bleu-doux: #4a90e2;
+    --bleu-grise: #e3f2fd;
+    --jaune-clair: #fff3cd;
+    --texte-fonce: #2c3e50;
+    --fond-principal: #f8f9fa;
+    --degrade-primaire: linear-gradient(135deg, #17a2b8 0%, #4a90e2 100%);
+    --degrade-carte: linear-gradient(135deg, #ffffff 0%, #f1f8ff 100%);
+}
+
+/* =========================================
+   STYLES GLOBAUX
+   ========================================= */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--fond-principal);
+    color: var(--texte-fonce);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+/* =========================================
+   NAVBAR (Menu du haut)
+   ========================================= */
+.navbar-custom {
+    background: var(--degrade-primaire);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: white !important;
+    letter-spacing: 0.5px;
+}
+
+.nav-link-custom {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link-custom:hover {
+    color: white !important;
+}
+
+/* =========================================
+   CARTES (Cards)
+   ========================================= */
+.card {
+    border: none;
+    border-radius: 12px;
+    background: var(--degrade-carte);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(23, 162, 184, 0.15);
+}
+
+.card-header {
+    border-bottom: 2px solid var(--bleu-grise);
+    background: transparent;
+    font-weight: 600;
+}
+
+/* =========================================
+   TABLEAUX
+   ========================================= */
+.table {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.table thead th {
+    background-color: var(--bleu-grise);
+    color: var(--bleu-canard);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    border-bottom: none;
+}
+
+.table tbody tr:hover {
+    background-color: var(--jaune-clair);
+    transition: background-color 0.2s ease;
+}
+
+/* =========================================
+   BOUTONS
+   ========================================= */
+.btn-primary {
+    background: var(--degrade-primaire);
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1.5rem;
+    font-weight: 500;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn-primary:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+}
+
+/* =========================================
+   FORMULAIRES
+   ========================================= */
+.form-control, .form-select {
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    padding: 0.7rem 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--bleu-canard);
+    box-shadow: 0 0 0 0.25rem rgba(23, 162, 184, 0.25);
+}
+
+/* =========================================
+   MESSAGES FLASH (Alertes)
+   ========================================= */
+.alert {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+footer {
+    background-color: var(--texte-fonce);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 1.5rem 0;
+    text-align: center;
+}
+/* Force l'affichage des couleurs du dashboard */
+.card-stat {
+    color: white !important;
+}
+.card-stat small, .card-stat h3, .card-stat i {
+    color: white !important;
+}
+/* --- CORRECTION DES CARTES DU DASHBOARD --- */
+.card-stat {
+    background: transparent !important; /* Annule le fond blanc de ton CSS */
+    color: white !important;
+}
+
+.card-stat h3, 
+.card-stat small, 
+.card-stat i {
+    color: white !important; /* Force le texte et les icônes en blanc */
+}
