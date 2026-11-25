@@ -37,5 +37,5 @@
 ---
 
 <p align="center">
-  Made with 💖 — Crafted <strong>Wala Berri</strong> for an academic PHP project.
+  Made with 💖 — Crafted for an academic PHP project.
 </p>
